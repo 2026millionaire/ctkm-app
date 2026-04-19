@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTKM Sinh Nhật PNJ 38 Năm - Hướng Dẫn TVV</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  :root {
+    --pnj-gold: #C8A850;
+    --pnj-gold-light: #E8D48A;
+    --pnj-gold-dark: #A08030;
+    --pnj-black: #1A1A1A;
+    --pnj-dark: #2C2C2C;
+    --pnj-white: #FFFFFF;
+    --pnj-bg: #F5F0E5;
+    --pnj-red: #D32F2F;
+    --pnj-green: #388E3C;
+    --pnj-blue: #1565C0;
+    --pnj-purple: #7B1FA2;
+    --pnj-orange: #E65100;
+    --pnj-pink: #C2185B;
+    --shadow: 0 4px 20px rgba(0,0,0,0.1);
+    --shadow-lg: 0 8px 40px rgba(0,0,0,0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--pnj-bg);
+    color: var(--pnj-black);
+    line-height: 1.5;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, var(--pnj-black) 0%, #3a3a3a 50%, var(--pnj-black) 100%);
+    color: var(--pnj-white);
+    text-align: center;
+    padding: 32px 20px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(200,168,80,0.03) 30px, rgba(200,168,80,0.03) 60px);
+  }
+  .header-badge {
+    display: inline-block;
+    background: var(--pnj-gold);
+    color: var(--pnj-black);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 6px;
+    position: relative;
+    text-shadow: 0 2px 10px rgba(200,168,80,0.3);
+  }
+  .header h1 span { color: var(--pnj-gold); }
+  .header .subtitle {
+    font-size: 18px;
+    color: var(--pnj-gold-light);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .header .date-info {
+    font-size: 14px;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .header .date-info .tag {
+    background: rgba(200,168,80,0.2);
+    border: 1px solid rgba(200,168,80,0.4);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+
+  /* QUICK NAV */
+  .quick-nav {
+    background: var(--pnj-white);
+    padding: 12px 16px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+  .quick-nav a {
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: var(--pnj-black);
+    background: #f0f0f0;
+    transition: all 0.2s;
+    border: 1.5px solid transparent;
+  }
+  .quick-nav a:hover {
+    background: var(--pnj-gold);
+    color: var(--pnj-black);
+  }
+  .quick-nav a.hot {
+    background: var(--pnj-red);
+    color: white;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(211,47,47,0.4); }
+    50% { box-shadow: 0 0 0 6px rgba(211,47,47,0); }
+  }
+
+  /* MAIN CONTAINER */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  /* KEY RULES BOX */
+  .key-rules {
+    background: linear-gradient(135deg, #FFF3E0, #FFF8E1);
+    border: 2px solid var(--pnj-gold);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .key-rules h2 {
+    font-size: 16px;
+    color: var(--pnj-gold-dark);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .key-rules ul {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+  }
+  .key-rules li {
+    font-size: 13px;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid var(--pnj-gold);
+    font-weight: 500;
+  }
+  .key-rules li strong { color: var(--pnj-red); }
+
+  /* PROGRAM CARDS */
+  .program-card {
+    background: var(--pnj-white);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid #e0e0e0;
+  }
+  .program-header {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .program-number {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+    color: white;
+    flex-shrink: 0;
+  }
+  .program-title {
+    flex: 1;
+  }
+  .program-title h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .program-title .tags {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+  .program-title .tags span {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .program-body {
+    padding: 0 20px 20px;
+  }
+
+  /* BENEFIT TABLE */
+  .benefit-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 12px 0;
+  }
+  .benefit-table th {
+    background: var(--pnj-black);
+    color: var(--pnj-gold);
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .benefit-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+  }
+  .benefit-table tr:nth-child(even) td {
+    background: #FAFAF5;
+  }
+  .benefit-table .money {
+    color: var(--pnj-red);
+    font-weight: 800;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .benefit-table .condition {
+    color: var(--pnj-blue);
+    font-weight: 600;
+  }
+  .benefit-table .gift {
+    color: var(--pnj-green);
+    font-weight: 600;
+  }
+  .benefit-table .highlight-row td {
+    background: #FFF9C4 !important;
+    border-left: 3px solid var(--pnj-gold);
+  }
+
+  /* SCENARIO BOX */
+  .scenario-box {
+    background: #F3E5F5;
+    border: 1px solid #CE93D8;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 12px 0;
+  }
+  .scenario-box h4 {
+    font-size: 13px;
+    color: var(--pnj-purple);
+    margin-bottom: 8px;
+  }
+  .scenario-box p {
+    font-size: 12px;
+    margin-bottom: 6px;
+    line-height: 1.6;
+  }
+  .scenario-box .result {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--pnj-green);
+    margin-top: 8px;
+    font-size: 13px;
+  }
+
+  /* NOTE BOX */
+  .note-box {
+    background: #FFF3E0;
+    border-left: 4px solid var(--pnj-orange);
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    margin: 10px 0;
+    font-size: 12px;
+  }
+  .note-box.danger {
+    background: #FFEBEE;
+    border-left-color: var(--pnj-red);
+  }
+  .note-box.success {
+    background: #E8F5E9;
+    border-left-color: var(--pnj-green);
+  }
+  .note-box strong { display: block; margin-bottom: 4px; }
+
+  /* QUICK LOOKUP (the key feature for TVV) */
+  .lookup-section {
+    background: linear-gradient(135deg, var(--pnj-black), #2a2a2a);
+    color: white;
+    border-radius: 16px;
+    padding: 24px 20px;
+    margin-bottom: 20px;
+  }
+  .lookup-section h2 {
+    color: var(--pnj-gold);
+    font-size: 18px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .lookup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .lookup-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(200,168,80,0.3);
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .lookup-card:hover {
+    background: rgba(200,168,80,0.15);
+    border-color: var(--pnj-gold);
+    transform: translateY(-2px);
+  }
+  .lookup-card .icon { font-size: 28px; margin-bottom: 6px; }
+  .lookup-card .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--pnj-gold-light);
+    margin-bottom: 4px;
+  }
+  .lookup-card .value {
+    font-size: 11px;
+    opacity: 0.8;
+    line-height: 1.4;
+  }
+
+  /* COMPARE CHART */
+  .compare-section {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  .compare-section h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: var(--pnj-black);
+  }
+  .bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .bar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .bar-label {
+    width: 140px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .bar-track {
+    flex: 1;
+    height: 28px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    transition: width 1s ease;
+  }
+
+  /* STACKING RULES */
+  .stacking-matrix {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin: 12px 0;
+  }
+  .stacking-matrix th {
+    background: var(--pnj-dark);
+    color: white;
+    padding: 8px 6px;
+    font-size: 10px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .stacking-matrix td {
+    padding: 6px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    font-weight: 700;
+  }
+  .stacking-matrix .yes { color: #1B5E20; background: #C8E6C9; }
+  .stacking-matrix .no { color: #B71C1C; background: #FFCDD2; }
+  .stacking-matrix .na { color: #555; background: #e8e8e8; }
+  .stacking-matrix tbody th { color: var(--pnj-black); background: #f5f5f5; }
+
+  /* TIMELINE */
+  .timeline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 10px 0;
+    overflow-x: auto;
+  }
+  .timeline-item {
+    text-align: center;
+    min-width: 80px;
+    position: relative;
+  }
+  .timeline-dot {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    margin: 0 auto 6px;
+    border: 3px solid var(--pnj-gold);
+    background: white;
+  }
+  .timeline-dot.active {
+    background: var(--pnj-gold);
+    box-shadow: 0 0 0 4px rgba(200,168,80,0.3);
+  }
+  .timeline-date { font-size: 11px; font-weight: 700; }
+  .timeline-label { font-size: 10px; color: #666; }
+  .timeline-line {
+    flex: 1;
+    height: 2px;
+    background: var(--pnj-gold);
+    min-width: 20px;
+    margin-top: -14px;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    color: #999;
+  }
+
+  /* ACCORDION */
+  .accordion-toggle { display: none; }
+  .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .accordion-toggle:checked + .program-card .accordion-body { max-height: 5000px; }
+  .accordion-toggle:checked + .program-card .program-header::after { transform: rotate(180deg); }
+  .program-header::after {
+    content: '\25BC';
+    font-size: 12px;
+    color: #999;
+    transition: transform 0.3s;
+  }
+
+  /* VIP TIERS */
+  .vip-legend {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+  }
+  .vip-badge {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+  .vip-new { background: #E3F2FD; color: #1565C0; border: 1px solid #90CAF9; }
+  .vip-connect { background: #E8F5E9; color: #2E7D32; border: 1px solid #A5D6A7; }
+  .vip-1 { background: #FFF3E0; color: #E65100; border: 1px solid #FFCC80; }
+  .vip-2 { background: #FCE4EC; color: #C2185B; border: 1px solid #F48FB1; }
+  .vip-3 { background: #F3E5F5; color: #7B1FA2; border: 1px solid #CE93D8; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .header h1 { font-size: 22px; }
+    .lookup-grid { grid-template-columns: 1fr; }
+    .bar-label { width: 100px; font-size: 11px; }
+    .benefit-table { font-size: 11px; }
+    .benefit-table th, .benefit-table td { padding: 6px 8px; }
+    .stacking-matrix { font-size: 9px; }
+    .stacking-matrix th, .stacking-matrix td { padding: 4px 3px; }
+  }
+
+  /* BACK LINK */
+  .back-bar {
+    background: var(--pnj-black);
+    padding: 10px 16px;
+    text-align: left;
+  }
+  .back-bar a {
+    color: var(--pnj-gold-light);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-bar a:hover { color: var(--pnj-gold); }
+
+  /* PRINT */
+  @media print {
+    .quick-nav { display: none; }
+    .back-bar { display: none; }
+    .program-card { break-inside: avoid; }
+    .accordion-body { max-height: none !important; }
+    body { background: white; }
+  }
+
+  /* FLOWCHART */
+  .flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 12px 0;
+  }
+  .flow-step {
+    background: white;
+    border: 2px solid var(--pnj-gold);
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    max-width: 320px;
+    width: 100%;
+  }
+  .flow-step.decision {
+    border-color: var(--pnj-blue);
+    background: #E3F2FD;
+    transform: rotate(0deg);
+    border-radius: 8px;
+  }
+  .flow-arrow {
+    font-size: 20px;
+    color: var(--pnj-gold);
+    line-height: 1;
+  }
+  .flow-branch {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 500px;
+  }
+  .flow-branch .flow-step { flex: 1; font-size: 12px; }
+
+  /* SORT TOGGLE */
+  .sort-toggle-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .sort-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px solid var(--pnj-gold);
+    background: white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .sort-btn.active {
+    background: var(--pnj-gold);
+    color: var(--pnj-black);
+  }
+  .sort-btn:hover { background: var(--pnj-gold-light); }
+</style>
+</head>
+<body>
+
+<!-- =================== BACK BAR =================== -->
+<div class="back-bar">
+  <a href="/ctkm/">&larr; Về danh sách CTKM</a>
+</div>
+
+<!-- =================== HEADER =================== -->
+<div class="header">
+  <div class="header-badge">TRAINING - NỘI BỘ</div>
+  <h1>SINH NHẬT <span>PNJ 38 NĂM</span></h1>
+  <div class="subtitle">"Vững Niềm Tin, Sáng Giá Trị"</div>
+  <div class="date-info">
+    <span class="tag">10/04 - 03/05/2026</span>
+    <span class="tag">24 Ngày</span>
+    <span class="tag">Offline + Online</span>
+  </div>
+</div>
+
+<!-- =================== QUICK NAV =================== -->
+<div class="quick-nav">
+  <a href="#lookup" class="hot">TRA NHANH</a>
+  <a href="#ct01">CT01 Du lịch</a>
+  <a href="#ct02">CT02 Combo</a>
+  <a href="#ct03">CT03 Tặng túi</a>
+  <a href="#ct04">CT04 Birthday</a>
+  <a href="#ct05">CT05 Bình giữ nhiệt</a>
+  <a href="#ct06">CT06 HĐ kế tiếp</a>
+  <a href="#ct07">CT07 Giảm 38%</a>
+  <a href="#stacking">Chồng CT</a>
+  <a href="#rules">Lưu ý</a>
+</div>
+
+<div class="container">
+
+<!-- =================== TIMELINE =================== -->
+<div class="compare-section" style="margin-top: 8px;">
+  <h2>DÒNG THỜI GIAN CHƯƠNG TRÌNH</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot active"></div>
+      <div class="timeline-date">10/04</div>
+      <div class="timeline-label">Bắt đầu CT</div>
+    </div>
+    <div class="timeline-line"></div>
+    <div class="timeline-item">
+      <div class="timeline-dot active"></div>
+      <div class="timeline-date">28/04</div>
+      <div class="timeline-label">CT03 Đón SN</div>
+    </div>
+    <div class="timeline-line"></div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">03/05</div>
+      <div class="timeline-label">Kết thúc CT</div>
+    </div>
+    <div class="timeline-line"></div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">30/06</div>
+      <div class="timeline-label">HSD Ecode/PQT/Birthday Pass</div>
+    </div>
+  </div>
+</div>
+
+<!-- =================== QUICK LOOKUP =================== -->
+<div class="lookup-section" id="lookup">
+  <h2>KHÁCH MUA GÌ? &rarr; TƯ VẤN NGAY</h2>
+  <div class="lookup-grid">
+    <div class="lookup-card">
+      <div class="icon">💎</div>
+      <div class="label">TRANG SỨC KIM CƯƠNG</div>
+      <div class="value">Giảm 800K - 4TR<br>+ PQT đến 2.5TR<br>+ Bình giữ nhiệt<br>+ Ưu đãi thêm 2-4% <span style="background:#FFC107;color:#000;padding:1px 4px;border-radius:3px;font-size:10px;">PL1</span></div>
+    </div>
+    <div class="lookup-card">
+      <div class="icon">✨</div>
+      <div class="label">TRANG SỨC ECZ / CZ</div>
+      <div class="value">Giảm 800K - 4TR<br>+ PQT đến 2.5TR<br>+ ALL KH topup 4% <span style="background:#FFC107;color:#000;padding:1px 4px;border-radius:3px;font-size:10px;">PL1</span></div>
+    </div>
+    <div class="lookup-card">
+      <div class="icon">🥈</div>
+      <div class="label">TRANG SỨC BẠC / HKCC</div>
+      <div class="value">Giảm 100K - 150K<br>+ PQT 150K<br>+ SP chọn lọc giảm đến 38%</div>
+    </div>
+    <div class="lookup-card">
+      <div class="icon">⌚</div>
+      <div class="label">ĐỒNG HỒ</div>
+      <div class="value">Giảm 800K - 4TR<br>+ PQT đến 2.5TR<br>+ SP chọn lọc giảm đến 38%</div>
+    </div>
+    <div class="lookup-card">
+      <div class="icon">💛</div>
+      <div class="label">VÀNG MIẾNG / TÀI LỘC</div>
+      <div class="value">Mua từ 1 chỉ<br>&rarr; PQT 300K mua TS/ĐH</div>
+    </div>
+    <div class="lookup-card">
+      <div class="icon">💍</div>
+      <div class="label">NHẪN KHOEN</div>
+      <div class="value">Mua từ 1 chỉ<br>&rarr; PQT 300K mua TS/ĐH</div>
+    </div>
+    <div class="lookup-card">
+      <div class="icon">🎂</div>
+      <div class="label">BIRTHDAY PASS (SMS)</div>
+      <div class="value">Giảm 5% - 20% tùy dòng hàng<br>HĐ từ 300TR: Tặng nước hoa</div>
+    </div>
+    <div class="lookup-card">
+      <div class="icon">🏆</div>
+      <div class="label">TOP DOANH THU</div>
+      <div class="value">Top 1: Du lịch Châu Âu 200TR<br>Top 38: Voucher 20TR<br>VIP3: Voucher 5TR<br>VIP1-2: Voucher 3TR</div>
+    </div>
+  </div>
+</div>
+
+<!-- =================== SORT TOGGLE =================== -->
+<div class="sort-toggle-wrap">
+  <button class="sort-btn active" onclick="sortPrograms('sequential')" id="btn-seq">CT01 → CT07</button>
+  <button class="sort-btn" onclick="sortPrograms('priority')" id="btn-pri">Ưu tiên (CT chính trước)</button>
+</div>
+
+<div id="programs-container">
+
+<div class="program-section" data-seq="1" data-pri="4">
+<!-- =================== CT01: TOP DOANH THU =================== -->
+<input type="checkbox" class="accordion-toggle" id="acc-ct01">
+<div class="program-card" id="ct01">
+  <label for="acc-ct01" class="program-header" style="background: linear-gradient(135deg, #FFF8E1, #FFFDE7);">
+    <div class="program-number" style="background: var(--pnj-gold-dark);">01</div>
+    <div class="program-title">
+      <h3>TOP DOANH THU - CƠ HỘI DU LỊCH CHÂU ÂU</h3>
+      <div class="tags">
+        <span style="background:#FFE082;color:#E65100;">Tự động ghi nhận</span>
+        <span style="background:#E3F2FD;color:#1565C0;">Tất cả dòng hàng</span>
+      </div>
+    </div>
+  </label>
+  <div class="accordion-body">
+    <div class="program-body">
+
+      <table class="benefit-table">
+        <thead>
+          <tr>
+            <th>TOP</th>
+            <th>PHẠM VI</th>
+            <th>QUÀ TẶNG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td class="money" style="font-size:16px;">TOP 1</td>
+            <td>KH doanh thu cao nhất <b>toàn quốc</b></td>
+            <td class="gift" style="font-size:14px;">Du lịch Châu Âu cho 2 người (200 triệu)</td>
+          </tr>
+          <tr>
+            <td class="money">TOP 2-38</td>
+            <td>Top 38 KH doanh thu cao nhất <b>toàn quốc</b></td>
+            <td class="gift">Voucher du lịch 20 triệu</td>
+          </tr>
+          <tr>
+            <td class="money">VIP 3</td>
+            <td>Top 38 KH VIP 3 doanh thu cao nhất <b>mỗi chi nhánh</b></td>
+            <td class="gift">Voucher du lịch 5 triệu</td>
+          </tr>
+          <tr>
+            <td class="money">VIP 1-2</td>
+            <td>Top 62 KH VIP 1-2 doanh thu cao nhất <b>mỗi chi nhánh</b></td>
+            <td class="gift">Voucher du lịch 3 triệu</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box success">
+        <strong>TVV CẦN BIẾT:</strong>
+        - ĐƯỢC đồng thời với TẤT CẢ CT khác. Mọi giao dịch đều ghi nhận doanh thu.<br>
+        - Hạng thẻ xét theo thời điểm KẾT THÚC CT (03/05/2026).<br>
+        - Không áp dụng KH nội bộ, phiếu thu cọc, đơn thu đổi/bán lại trước 19/05/2026.
+      </div>
+      <div class="note-box danger">
+        <strong>LƯU Ý TỪ BB HỌP (09/04):</strong>
+        - Doanh thu xét cho KH <b>chính chủ</b> (trường Sold-to-party và Bill-to-party trùng nhau).<br>
+        - Mỗi KH chỉ nhận được <b>một loại quà tặng</b> trong chương trình.<br>
+        - Trường hợp 2 KH cùng đạt Top doanh thu bằng nhau &rarr; KH đạt Top theo <b>thời gian sớm hơn</b> được chọn.<br>
+        - Thời hạn nhận quà tặng: Hạn cuối <b>30/06/2026</b>.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="program-section" data-seq="2" data-pri="1">
+<!-- =================== CT02: COMBO ƯU ĐÃI =================== -->
+<input type="checkbox" class="accordion-toggle" id="acc-ct02" checked>
+<div class="program-card" id="ct02">
+  <label for="acc-ct02" class="program-header" style="background: linear-gradient(135deg, #FFFDE7, #FFF8E1);">
+    <div class="program-number" style="background: var(--pnj-red);">02</div>
+    <div class="program-title">
+      <h3>MỪNG SINH NHẬT PNJ - COMBO ƯU ĐÃI LÊN ĐẾN 38 TRIỆU</h3>
+      <div class="tags">
+        <span style="background:#FFCDD2;color:#C62828;">CT CHÍNH</span>
+        <span style="background:#E3F2FD;color:#1565C0;">Tất cả nhãn hàng</span>
+      </div>
+    </div>
+  </label>
+  <div class="accordion-body">
+    <div class="program-body">
+
+      <div class="note-box success">
+        <strong>NHÓM 1: TRANG SỨC VÀNG/PLATINUM + ĐỒNG HỒ + KIM CƯƠNG</strong>
+        (Không áp dụng: Dây chuyền/Không gắn đá/Công nghệ Ý chất liệu Vàng-Plat, KC rời, Đá rời, Vàng KN, Vàng TL, Vàng miếng, Nhẫn khoen, Tính công, BST Masterpiece)
+      </div>
+
+      <table class="benefit-table">
+        <thead>
+          <tr>
+            <th>MỨC HÓA ĐƠN</th>
+            <th>GIẢM NGAY</th>
+            <th>+ PHIẾU QUÀ TẶNG</th>
+            <th>VIP THÊM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="condition">10 triệu - dưới 45 triệu</td>
+            <td class="money">800.000đ</td>
+            <td>-</td>
+            <td rowspan="3" style="font-size:11px; line-height:1.6;">
+              <div style="background:#FFF3CD;border:1px solid #FFC107;border-radius:6px;padding:6px 8px;margin-bottom:8px;">
+                <b style="color:#D32F2F;">⚡ PHỤ LỤC 1 (từ 17/04):</b>
+              </div>
+              <b style="color:#1565C0;">TS ECZ, CZ (HĐ ≥10tr):</b><br>
+              <b>TẤT CẢ KH:</b> +4% tối đa 3TR/món<br>
+              <span style="font-size:10px;color:#888;">(Trước 17/04: chỉ KH Mới)</span><br><br>
+              <b style="color:#1565C0;">TS Kim Cương (HĐ ≥10tr):</b><br>
+              <b>KH Mới/KN:</b> +2% tối đa 8TR/món <span style="background:#C6EFCE;padding:1px 4px;border-radius:3px;font-size:10px;">MỚI</span><br>
+              <b>VIP 1-2:</b> +3% tối đa 10TR/món <span style="background:#FFFF00;padding:1px 4px;border-radius:3px;font-size:10px;">↑TĂNG</span><br>
+              <b>VIP 3:</b> HĐ &lt;500TR: +4% tối đa 15TR <span style="background:#FFFF00;padding:1px 4px;border-radius:3px;font-size:10px;">↑TĂNG</span><br>
+              VIP 3: HĐ &ge;500TR: +31.5TR (giữ nguyên)
+            </td>
+          </tr>
+          <tr class="highlight-row">
+            <td class="condition">45 triệu - dưới 80 triệu</td>
+            <td class="money">2.000.000đ</td>
+            <td class="gift">PQT 1.500.000đ</td>
+          </tr>
+          <tr class="highlight-row">
+            <td class="condition">Từ 80 triệu trở lên</td>
+            <td class="money">4.000.000đ</td>
+            <td class="gift">PQT 2.500.000đ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box success">
+        <strong>NHÓM 2: TRANG SỨC BẠC / HỢP KIM CAO CẤP</strong>
+        (PNJSilver, Disney|PNJ, Hello Kitty, Emoji, Doraemon, Mancode, Style, ARTA, PNJ Watch, KUROMI)
+      </div>
+
+      <table class="benefit-table">
+        <thead>
+          <tr>
+            <th>MỨC HÓA ĐƠN</th>
+            <th>GIẢM NGAY</th>
+            <th>+ PHIẾU QUÀ TẶNG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="condition">800.000đ - dưới 2.500.000đ</td>
+            <td class="money">100.000đ</td>
+            <td>-</td>
+          </tr>
+          <tr class="highlight-row">
+            <td class="condition">Từ 2.500.000đ trở lên</td>
+            <td class="money">150.000đ</td>
+            <td class="gift">PQT 150.000đ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box success">
+        <strong>QUÀ TẶNG THÊM THEO BỘ SƯU TẬP / NHÃN HÀNG</strong>
+      </div>
+
+      <table class="benefit-table">
+        <thead>
+          <tr>
+            <th>NHÃN HÀNG / BST</th>
+            <th>ĐIỀU KIỆN</th>
+            <th>QUÀ TẶNG THÊM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>MANCODE by PNJ</b></td>
+            <td class="condition">TS Vàng/Plat/Bạc/HKCC từ 10 triệu</td>
+            <td class="gift">Card Holder Mancode Tứ Yên Vững Lộc</td>
+          </tr>
+          <tr>
+            <td><b>MANCODE by PNJ</b></td>
+            <td class="condition">Top 40 doanh thu toàn quốc</td>
+            <td class="gift">Caravat Canali trị giá 7 triệu</td>
+          </tr>
+          <tr>
+            <td><b>Disney|PNJ, Hello Kitty,<br>Emoji, Doraemon, KUROMI</b></td>
+            <td class="condition">TS Vàng/Plat/Bạc/HKCC 9TR - dưới 25TR</td>
+            <td class="gift">Bình Disney / Túi mỹ phẩm / Son / Nón / Túi Doraemon</td>
+          </tr>
+          <tr>
+            <td><b>Disney|PNJ, Hello Kitty,<br>Emoji, Doraemon, KUROMI</b></td>
+            <td class="condition">TS Vàng/Plat/Bạc/HKCC từ 25TR</td>
+            <td class="gift">Thẻ nhựa dát vàng trị giá 999K</td>
+          </tr>
+          <tr>
+            <td><b>STYLE by PNJ</b></td>
+            <td class="condition">TS Vàng 4TR - dưới 10TR</td>
+            <td class="gift">Giảm ngay 300K</td>
+          </tr>
+          <tr>
+            <td><b>STYLE by PNJ</b></td>
+            <td class="condition">Tất cả TS từ 2TR</td>
+            <td class="gift">Tumbler Blindbox</td>
+          </tr>
+          <tr>
+            <td><b>BST Thập Nhị Linh Thú (0.39 chỉ)</b></td>
+            <td class="condition" rowspan="2">Mua SP bất kỳ thuộc BST</td>
+            <td class="gift" rowspan="2">Ecode: 3TR mua Bánh Nguyện Ước Vàng / Hoa Hồng Vàng<br>
+              HOẶC 1TR mua Đồng vàng Thiên Mã Đăng Hoa<br>
+              HOẶC 490K mua Tranh Lời Vàng Ý Ngọc từ 7.990K</td>
+          </tr>
+          <tr>
+            <td><b>BST Định Ước Uyên Ương</b></td>
+          </tr>
+          <tr>
+            <td><b>BST Timeless Diamond</b></td>
+            <td class="condition">Mua SP bất kỳ thuộc BST</td>
+            <td class="gift">Vali Samsonite trị giá 4 triệu</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="scenario-box">
+        <h4>VÍ DỤ TƯ VẤN THỰC TẾ</h4>
+        <p><b>Tình huống:</b> Khách hàng Kết nối mua Trang sức Kim cương giá <b>85 triệu</b></p>
+        <p>&rarr; Giảm ngay <b>4 triệu</b> (HĐ từ 80TR)</p>
+        <p>&rarr; Hóa đơn sau giảm: 81 triệu &ge; 80TR</p>
+        <div class="result">&rarr; Nhận thêm Phiếu Quà Tặng 2.500.000đ. TỔNG ƯU ĐÃI: 6.500.000đ</div>
+      </div>
+
+      <div class="scenario-box" style="background:#FFEBEE;border-color:#E57373;">
+        <h4 style="color:#C62828;">VÍ DỤ CẢNH BÁO TỪ BB HỌP (09/04) - DỄ NHẦM!</h4>
+        <p><b>Tình huống:</b> KH Kết nối mua Trang sức Kim cương giá <b>80 triệu</b> (đúng bằng mức 80TR)</p>
+        <p>&rarr; Giảm ngay <b>4 triệu</b> (HĐ từ 80TR)</p>
+        <p>&rarr; Hóa đơn sau giảm: <b>76 triệu</b> &lt; 80TR</p>
+        <div class="result" style="color:#C62828;background:#FFF3E0;">&rarr; KHÔNG được PQT 2.5TR! Chỉ nhận PQT <b>1.500.000đ</b> (khung 45TR - dưới 80TR). TỔNG: 5.500.000đ</div>
+        <p style="margin-top:8px;font-size:12px;color:#C62828;font-weight:700;">Nhớ: PQT tính theo giá trị SAU GIẢM, nên HĐ 80TR sau giảm chỉ còn 76TR!</p>
+      </div>
+
+      <div class="scenario-box">
+        <h4>VÍ DỤ 2: KHÁCH VIP 3 MUA COMBO</h4>
+        <p>Mua TS Kim cương Disney <b>30 triệu</b> + TS Đá màu Mancode <b>70 triệu</b> = <b>100 triệu</b></p>
+        <p>&rarr; Giảm 4TR (bill trên 80TR) + Giảm thêm 1.2TR (VIP3 <b style="color:#D32F2F;">4%</b> cho TS KC - <span style="background:#FFC107;padding:1px 4px;border-radius:3px;font-size:11px;">PL1 từ 17/04</span>)</p>
+        <p>&rarr; Card Holder Mancode (Mancode trên 10TR) + Thẻ dát vàng (Disney trên 25TR)</p>
+        <div class="result">&rarr; HĐ sau giảm 94.8TR &ge; 80TR &rarr; Nhận PQT 2.5TR. TỔNG: 8.699.000đ + 2 quà tặng <span style="background:#FFC107;padding:1px 4px;border-radius:3px;font-size:11px;">PL1</span></div>
+      </div>
+
+      <div class="note-box danger">
+        <strong>LƯU Ý QUAN TRỌNG:</strong>
+        - KHÔNG áp dụng đồng thời với CT Giảm giá, Chính sách VIP, Quà tặng hiện vật khác.<br>
+        - Giá trị HĐ tính tặng quà hiện vật / giảm ngay / ưu đãi thêm = giá trị <b>TRƯỚC GIẢM</b>.<br>
+        - Giá trị HĐ tính tặng Ecode / PQT = giá trị <b>SAU GIẢM</b>.<br>
+        - Mỗi HĐ chỉ nhận tối đa 1 PQT có giá trị cao nhất và ecode ARTA by PNJ.
+      </div>
+      <div class="note-box" style="background:#E3F2FD;border-left-color:#1565C0;">
+        <strong>THAO TÁC TẠI CỬA HÀNG (BB họp 09/04):</strong>
+        - Các ưu đãi giảm giá được <b>khai báo tự động trên mPOS</b> &rarr; CH lưu ý check kiểm tra lại.<br>
+        - Các quà tặng hiện vật lưu ý <b>xuất tay</b> (xuất thủ công).
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="program-section" data-seq="3" data-pri="5">
+<!-- =================== CT03: ĐÓN SINH NHẬT =================== -->
+<input type="checkbox" class="accordion-toggle" id="acc-ct03">
+<div class="program-card" id="ct03">
+  <label for="acc-ct03" class="program-header" style="background: linear-gradient(135deg, #FCE4EC, #F8BBD0);">
+    <div class="program-number" style="background: var(--pnj-pink);">03</div>
+    <div class="program-title">
+      <h3>ĐÓN SINH NHẬT CÙNG PNJ - TẶNG TÚI (Ngày 28/04)</h3>
+      <div class="tags">
+        <span style="background:#F48FB1;color:white;">CHỈ 1 NGÀY: 28/04/2026</span>
+        <span style="background:#E1BEE7;color:#6A1B9A;">Chỉ Offline</span>
+      </div>
+    </div>
+  </label>
+  <div class="accordion-body">
+    <div class="program-body">
+      <table class="benefit-table">
+        <thead>
+          <tr><th>ĐIỀU KIỆN</th><th>QUÀ TẶNG</th></tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td class="condition">KH MỚI phát sinh HĐ bất kỳ<br>(20 KH ĐẦU TIÊN mỗi cửa hàng)</td>
+            <td class="gift" style="font-size:14px;">Tặng ngay 01 Túi PNJ</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note-box success">
+        <strong>CHỒNG CHƯƠNG TRÌNH (Xác nhận từ MKT):</strong>
+        CT03 ĐƯỢC áp dụng với <b>TẤT CẢ</b> các ưu đãi giảm giá, quà tặng khác.
+      </div>
+      <div class="note-box">
+        <strong>LƯU Ý:</strong>
+        - Căn cứ theo SĐT và Mã KH/CCCD. 1 KH chỉ 1 lần/CH.<br>
+        - Trước khi trao quà, kiểm tra trùng và điền đầy đủ thông tin vào link SharePoint.<br>
+        - Mã hàng Túi: 40002962 / 40003427 / 40004043 (hết thì dùng 40003623)<br>
+        - <b>Không áp dụng KH nội bộ.</b>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="program-section" data-seq="4" data-pri="2">
+<!-- =================== CT04: BIRTHDAY PASS =================== -->
+<input type="checkbox" class="accordion-toggle" id="acc-ct04">
+<div class="program-card" id="ct04">
+  <label for="acc-ct04" class="program-header" style="background: linear-gradient(135deg, #F3E5F5, #EDE7F6);">
+    <div class="program-number" style="background: var(--pnj-purple);">04</div>
+    <div class="program-title">
+      <h3>ƯU ĐÃI BIRTHDAY PASS - GIẢM ĐẾN 20%</h3>
+      <div class="tags">
+        <span style="background:#E1BEE7;color:#6A1B9A;">Chỉ dành cho KH nhận SMS</span>
+        <span style="background:#FFECB3;color:#E65100;">HSD: 30/06/2026</span>
+      </div>
+    </div>
+  </label>
+  <div class="accordion-body">
+    <div class="program-body">
+
+      <div class="note-box">
+        <strong>AI ĐƯỢC DÙNG?</strong>
+        Chỉ KH chính chủ nhận BIRTHDAY PASS qua SMS. KHÔNG áp dụng KH VIP có code DOB tháng 4-5/2026 và VIPPASS tháng 3/2026.
+      </div>
+
+      <table class="benefit-table">
+        <thead>
+          <tr>
+            <th>DÒNG HÀNG</th>
+            <th style="text-align:center;">% GIẢM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kim cương rời, Đá rời, BST Masterpiece</td>
+            <td class="money" style="text-align:center;">5%</td>
+          </tr>
+          <tr>
+            <td>Trang sức Vỏ, Trang sức Kim cương, CZ, ECZ</td>
+            <td class="money" style="text-align:center;">12%</td>
+          </tr>
+          <tr>
+            <td>Trang sức Đá màu, Trang sức Ngọc trai</td>
+            <td class="money" style="text-align:center;">13%</td>
+          </tr>
+          <tr>
+            <td>SP ARTA by PNJ Vàng (tính món), TS Ý, Quà tặng sưu tầm Vàng, TS Dây chuyền</td>
+            <td class="money" style="text-align:center;">8%</td>
+          </tr>
+          <tr>
+            <td>TS/SP tính công (ưu đãi tiền công)</td>
+            <td class="money" style="text-align:center;">13%</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>TS/SP chất liệu Bạc / Hợp kim cao cấp</td>
+            <td class="money" style="text-align:center;">20%</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>Đồng hồ</td>
+            <td class="money" style="text-align:center;">18%</td>
+          </tr>
+          <tr style="background: #FFF9C4;">
+            <td><b>HĐ áp dụng Birthday Pass từ 300 TRIỆU</b></td>
+            <td class="gift" style="text-align:center;font-size:13px;">Tặng nước hoa cao cấp</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box danger">
+        <strong>KHÔNG ÁP DỤNG ĐỒNG THỜI:</strong>
+        CT giảm giá, Thẻ VIP, Phiếu ưu đãi, Chính sách ưu đãi nội bộ.<br>
+        CHỈ ĐƯỢC ĐỒNG THỜI với CT01 Top Doanh Thu.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="program-section" data-seq="5" data-pri="6">
+<!-- =================== CT05: BÌNH GIỮ NHIỆT =================== -->
+<input type="checkbox" class="accordion-toggle" id="acc-ct05">
+<div class="program-card" id="ct05">
+  <label for="acc-ct05" class="program-header" style="background: linear-gradient(135deg, #E3F2FD, #BBDEFB);">
+    <div class="program-number" style="background: var(--pnj-blue);">05</div>
+    <div class="program-title">
+      <h3>TẶNG BÌNH GIỮ NHIỆT KHI MUA TRANG SỨC KIM CƯƠNG</h3>
+      <div class="tags">
+        <span style="background:#90CAF9;color:#0D47A1;">77 CH chọn lọc</span>
+      </div>
+    </div>
+  </label>
+  <div class="accordion-body">
+    <div class="program-body">
+      <table class="benefit-table">
+        <thead>
+          <tr><th>ĐIỀU KIỆN</th><th>QUÀ TẶNG</th></tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td class="condition">HĐ có Trang sức Kim Cương bất kỳ</td>
+            <td class="gift">01 Bình giữ nhiệt PNJ</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note-box success">
+        <strong>CHỒNG CHƯƠNG TRÌNH (Xác nhận từ MKT):</strong>
+        CT05 ĐƯỢC áp dụng với <b>TẤT CẢ</b> các ưu đãi giảm giá, quà tặng khác.
+      </div>
+      <div class="note-box" style="background:#E3F2FD;border-left-color:#1565C0;">
+        <strong>8 CỬA HÀNG CHỌN LỌC TẠI MIỀN TRUNG (BB họp 09/04):</strong><br>
+        70 Trần Phú, NEXT Đà Nẵng, 513 Điện Biên Phủ, 165 Nguyễn Văn Thoại, NEXT Huế, 79A Trần Hưng Đạo, 86QL9B - Đông Hà, Hội An.
+      </div>
+      <div class="note-box">
+        Mã hàng: 40003625 / 40003288 / 40003271 / 40003244. 1 KH chỉ 1 lần/CH.<br>
+        Trước khi trao quà, kiểm tra trùng và điền thông tin vào link SharePoint.<br>
+        <b>Không áp dụng KH nội bộ.</b>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="program-section" data-seq="6" data-pri="7">
+<!-- =================== CT06: HÓA ĐƠN KẾ TIẾP =================== -->
+<input type="checkbox" class="accordion-toggle" id="acc-ct06">
+<div class="program-card" id="ct06">
+  <label for="acc-ct06" class="program-header" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2);">
+    <div class="program-number" style="background: var(--pnj-orange);">06</div>
+    <div class="program-title">
+      <h3>ƯU ĐÃI CHO HÓA ĐƠN KẾ TIẾP - VÀNG / NHẪN KHOEN</h3>
+      <div class="tags">
+        <span style="background:#FFE0B2;color:#E65100;">Nhãn hàng PNJ</span>
+      </div>
+    </div>
+  </label>
+  <div class="accordion-body">
+    <div class="program-body">
+      <table class="benefit-table">
+        <thead>
+          <tr><th>DÒNG HÀNG</th><th>ĐIỀU KIỆN</th><th>PHIẾU QUÀ TẶNG</th></tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td><b>Nhẫn Khoen, Vàng miếng, Vàng Tài Lộc</b></td>
+            <td class="condition">Mua từ 1 chỉ trở lên</td>
+            <td class="gift" style="font-size:14px;">PQT 300.000đ mua TS/ĐH bất kỳ</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note-box">
+        - 1 KH chỉ nhận 1 lần PQT. PQT HSD: 30/06/2026. PQT yêu cầu <b>CHÍNH CHỦ</b>.<br>
+        - Chỉ nhận PQT khi HĐ không có SP khác áp dụng VIP và không nhận PQT giá trị lớn hơn.<br>
+        - CT không kết thúc sớm khi hết code (HO đã dự trù đủ số lượng).<br>
+        - <b>Không áp dụng KH nội bộ.</b>
+      </div>
+      <div class="scenario-box">
+        <h4>VÍ DỤ TỪ BB HỌP (09/04) - TÁCH HÓA ĐƠN</h4>
+        <p><b>Tình huống:</b> KH mua đồng thời Trang sức + Nhẫn khoen, Trang sức có áp dụng CTKM khác</p>
+        <div class="result">&rarr; CH phải <b>tách hóa đơn</b> xuất Nhẫn khoen riêng để KH nhận được PQT 300K này.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="program-section" data-seq="7" data-pri="3">
+<!-- =================== CT07: SẢN PHẨM CHỌN LỌC =================== -->
+<input type="checkbox" class="accordion-toggle" id="acc-ct07">
+<div class="program-card" id="ct07">
+  <label for="acc-ct07" class="program-header" style="background: linear-gradient(135deg, #E8F5E9, #F1F8E9);">
+    <div class="program-number" style="background: var(--pnj-green);">07</div>
+    <div class="program-title">
+      <h3>ƯU ĐÃI DANH MỤC SẢN PHẨM CHỌN LỌC LÊN ĐẾN 38%</h3>
+      <div class="tags">
+        <span style="background:#C8E6C9;color:#2E7D32;">Theo danh sách SKU đính kèm</span>
+      </div>
+    </div>
+  </label>
+  <div class="accordion-body">
+    <div class="program-body">
+
+      <table class="benefit-table">
+        <thead>
+          <tr>
+            <th>DÒNG HÀNG</th>
+            <th style="text-align:center;">% GIẢM TỐI ĐA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td><b>Trang sức Bạc / Hợp kim cao cấp + Đồng hồ</b></td>
+            <td class="money" style="text-align:center;font-size:18px;">38%</td>
+          </tr>
+          <tr>
+            <td>Trang sức ECZ, Kim cương, Vỏ, Ngọc trai, Đá màu</td>
+            <td class="money" style="text-align:center;">25%</td>
+          </tr>
+          <tr>
+            <td>Trang sức CZ</td>
+            <td class="money" style="text-align:center;">10%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <strong>LƯU Ý:</strong>
+        - Chỉ áp dụng cho danh sách mã 13 ký tự đính kèm. Hàng có sẵn, KHÔNG đặt hàng lại.<br>
+        - Khai báo tự động trên mPOS. Nếu không hiển thị &rarr; dùng Condition ZDI6.<br>
+        - KHÔNG đồng thời với CT Giảm giá, VIP, Quà tặng hiện vật khác.<br>
+        - ĐƯỢC đồng thời với CT01, CT03, CT05.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="program-section" data-seq="8" data-pri="8">
+<!-- =================== ƯU ĐÃI TỪ ACTIVATION =================== -->
+<input type="checkbox" class="accordion-toggle" id="acc-activ">
+<div class="program-card" id="activation">
+  <label for="acc-activ" class="program-header" style="background: linear-gradient(135deg, #E8EAF6, #C5CAE9);">
+    <div class="program-number" style="background: #3F51B5;">AC</div>
+    <div class="program-title">
+      <h3>ƯU ĐÃI TỪ HOẠT ĐỘNG ACTIVATION (Phiếu ưu đãi phát hành)</h3>
+      <div class="tags">
+        <span style="background:#C5CAE9;color:#283593;">Phiếu ưu đãi</span>
+        <span style="background:#FFECB3;color:#E65100;">HSD: 30/06/2026</span>
+      </div>
+    </div>
+  </label>
+  <div class="accordion-body">
+    <div class="program-body">
+      <table class="benefit-table">
+        <thead>
+          <tr><th>ƯU ĐÃI</th><th>ĐỐI TƯỢNG</th><th>DÒNG HÀNG</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="money">Giảm 9% (tối đa 1.5TR)</td>
+            <td><b>Khách hàng MỚI</b></td>
+            <td>TS Vàng, Plat, Bạc, HKCC, Đồng hồ<br>(Không: Dây chuyền/Không gắn đá/CN Ý Vàng, KC rời, Đá rời, VKN, VTL, VM, NK, Tính công, Masterpiece, QT thương hiệu Vàng/Plat)</td>
+          </tr>
+          <tr>
+            <td class="gift">Bình giữ nhiệt PNJ</td>
+            <td><b>Tất cả KH</b></td>
+            <td>HĐ từ 20 triệu (cùng dòng hàng trên)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+</div> <!-- /programs-container -->
+
+<!-- =================== BẢNG CHỒNG CT =================== -->
+<div class="compare-section" id="stacking">
+  <h2>BẢNG CHỒNG CHƯƠNG TRÌNH - CÁI NÀO ĐƯỢC ÁP DỤNG CÙNG?</h2>
+  <div style="overflow-x: auto;">
+    <table class="stacking-matrix">
+      <thead>
+        <tr>
+          <th></th>
+          <th>CT01<br>Top DT</th>
+          <th>CT02<br>Combo</th>
+          <th>CT03<br>Đón SN</th>
+          <th>CT04<br>B.Pass</th>
+          <th>CT05<br>Bình</th>
+          <th>CT06<br>HĐ tiếp</th>
+          <th>CT07<br>Chọn lọc</th>
+          <th>VIP</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th style="text-align:left;background:#f5f5f5;">CT01 Top DT</th>
+          <td class="na">-</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+        </tr>
+        <tr>
+          <th style="text-align:left;background:#f5f5f5;">CT02 Combo</th>
+          <td class="yes">✔</td>
+          <td class="na">-</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+          <td class="no">✘</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <th style="text-align:left;background:#f5f5f5;">CT03 Đón SN</th>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="na">-</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+        </tr>
+        <tr>
+          <th style="text-align:left;background:#f5f5f5;">CT04 B.Pass</th>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+          <td class="yes">✔</td>
+          <td class="na">-</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+          <td class="no">✘</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <th style="text-align:left;background:#f5f5f5;">CT05 Bình</th>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="na">-</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+          <td class="yes">✔</td>
+        </tr>
+        <tr>
+          <th style="text-align:left;background:#f5f5f5;">CT07 Chọn lọc</th>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+          <td class="na">-</td>
+          <td class="no">✘</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note-box" style="margin-top:12px;">
+    <strong>MẸO NHỚ NHANH:</strong>
+    CT01 (Top DT), CT03 (Đón SN) và CT05 (Bình giữ nhiệt) là các CT "thân thiện" nhất - ĐƯỢC chồng với <b>TẤT CẢ</b> CT khác.<br>
+    CT02 (Combo) và CT04 (Birthday Pass) là 2 CT "độc quyền" - KHÔNG được chồng với nhau và VIP.<br>
+    <span style="color:#1565C0;font-weight:700;">Nguồn: BB họp 09/04 + Xác nhận MKT Chi Nhánh.</span>
+  </div>
+</div>
+
+<!-- =================== FLOWCHART TƯ VẤN =================== -->
+<div class="compare-section">
+  <h2>QUY TRÌNH TƯ VẤN NHANH</h2>
+  <div class="flow-container">
+    <div class="flow-step decision">Khách hàng mua <b>NHÓM HÀNG</b> gì?</div>
+    <div class="flow-arrow">&darr;</div>
+    <div class="flow-branch">
+      <div class="flow-step" style="border-color:var(--pnj-red);background:#FFF3E0;">
+        <b>Trang sức Vàng/Plat/KC/ĐH</b><br>
+        &rarr; CT02 (Combo)<br>
+        hoặc CT04 (B.Pass)<br>
+        hoặc CT07 (Chọn lọc)
+      </div>
+      <div class="flow-step" style="border-color:var(--pnj-green);background:#E8F5E9;">
+        <b>Trang sức Bạc/HKCC</b><br>
+        &rarr; CT02 (Combo)<br>
+        hoặc CT07 (Chọn lọc)
+      </div>
+      <div class="flow-step" style="border-color:var(--pnj-orange);background:#FFF3E0;">
+        <b>Vàng miếng/Tài Lộc/NK</b><br>
+        &rarr; CT06 (PQT 300K)
+      </div>
+    </div>
+    <div class="flow-arrow">&darr;</div>
+    <div class="flow-step decision">Khách hàng có <b>Birthday Pass</b> (SMS)?</div>
+    <div class="flow-arrow">&darr;</div>
+    <div class="flow-branch">
+      <div class="flow-step" style="border-color:var(--pnj-purple);background:#F3E5F5;">
+        <b>CÓ</b> &rarr; So sánh CT02 vs CT04, chọn CT <b>có lợi hơn</b> cho KH
+      </div>
+      <div class="flow-step" style="border-color:var(--pnj-green);background:#E8F5E9;">
+        <b>KHÔNG</b> &rarr; Áp dụng CT02 (Combo) hoặc CT07 (Chọn lọc)
+      </div>
+    </div>
+    <div class="flow-arrow">&darr;</div>
+    <div class="flow-step" style="background:var(--pnj-gold);border-color:var(--pnj-gold-dark);font-weight:800;">
+      Kiểm tra thêm: CT01 (tự động) + CT03 (28/04) + CT05 (bình giữ nhiệt Kim cương)
+    </div>
+  </div>
+</div>
+
+<!-- =================== LƯU Ý CHUNG =================== -->
+<div class="key-rules" id="rules">
+  <h2>📋 QUY ĐỊNH CHUNG CẦN NHỚ</h2>
+  <ul>
+    <li><strong>KHÔNG</strong> cộng gộp hóa đơn (trừ trường hợp Online cùng 1 mã KH hoặc combo cùng 1 CH)</li>
+    <li>HĐ phải ở trạng thái <strong>ĐÃ THANH TOÁN</strong> mới nhận ưu đãi (trừ HĐ Online & TTTM thu hộ)</li>
+    <li>Nhẫn cưới thuộc dòng hàng nào &rarr; áp dụng CT theo dòng hàng đó</li>
+    <li>Ưu đãi (giảm giá + Ecode/PQT) <strong>KHÔNG vượt quá 50%</strong> giá trị sản phẩm</li>
+    <li><strong>KHÔNG</strong> áp dụng đồng thời với chính sách ưu đãi nội bộ / nhân viên</li>
+    <li>KH thỏa nhiều ĐK nhận PQT &rarr; chỉ nhận <strong>duy nhất 1 PQT giá trị cao nhất</strong></li>
+    <li>Ecode/PQT phát hành trong CT: HSD <strong>10/04 - 30/06/2026</strong></li>
+    <li>Ecode: 1 lần duy nhất / 1 HĐ / tối đa 1 Ecode. KHÔNG đồng thời với VIP, VIP Pass, phiếu ưu đãi khác</li>
+    <li>PQT: ĐƯỢC đồng thời tất cả CT. KHÔNG được dùng tại CH trong một số TTTM và CAO Jewelry</li>
+    <li>Nhớ <strong>xóa chiết khấu tự động</strong> trên SAP/mPOS nếu KH không chọn CT này</li>
+  </ul>
+</div>
+
+<!-- =================== QUY ĐỊNH CỌC =================== -->
+<div class="compare-section">
+  <h2>QUY ĐỊNH ĐẶT CỌC</h2>
+  <table class="benefit-table">
+    <thead>
+      <tr><th>ĐẶT HÀNG</th><th>LẤY HÀNG</th><th>ÁP DỤNG?</th><th>GHI CHÚ</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Trước 10/04</td>
+        <td>10/04 - 03/05</td>
+        <td class="gift">✔ ĐƯỢC</td>
+        <td>Chỉ chọn 1 CT</td>
+      </tr>
+      <tr>
+        <td>Trước 10/04</td>
+        <td>Sau 03/05</td>
+        <td class="money">✘ KHÔNG</td>
+        <td>-</td>
+      </tr>
+      <tr class="highlight-row">
+        <td>10/04 - 03/05</td>
+        <td>10/04 - 30/06</td>
+        <td class="gift">✔ ĐƯỢC</td>
+        <td>Cọc từ 50-100%. SP có sẵn trên hệ thống. Chốt mã, batch, giá trên đơn cọc.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- =================== MÃ HÀNG QUÀ TẶNG =================== -->
+<input type="checkbox" class="accordion-toggle" id="acc-mahang">
+<div class="program-card">
+  <label for="acc-mahang" class="program-header" style="background:#f5f5f5;">
+    <div class="program-number" style="background:#616161;">MH</div>
+    <div class="program-title">
+      <h3>MÃ HÀNG QUÀ TẶNG - THAM KHẢO NHANH</h3>
+      <div class="tags"><span style="background:#e0e0e0;color:#333;">Ghi chú trên HĐ: QUÀ TẶNG CT SINH NHẬT PNJ 38 NĂM</span></div>
+    </div>
+  </label>
+  <div class="accordion-body">
+    <div class="program-body">
+      <table class="benefit-table">
+        <thead><tr><th>QUÀ TẶNG</th><th>MÃ HÀNG</th></tr></thead>
+        <tbody>
+          <tr><td>Card Holder Mancode Tứ Yên Vững Lộc</td><td><b>40004044</b></td></tr>
+          <tr><td>Tumbler Blindbox</td><td><b>40004083 / 40004174</b> <span style="background:#FFC107;padding:1px 4px;border-radius:3px;font-size:10px;">PL1</span></td></tr>
+          <tr><td>Thẻ nhựa dát vàng</td><td><b>TZ0000Y060125 / 060126 / 060127 / 060131 / 060132</b></td></tr>
+          <tr><td>Bình Disney</td><td><b>40003312</b></td></tr>
+          <tr><td>Túi mỹ phẩm</td><td><b>40003844</b></td></tr>
+          <tr><td>Son lip balm</td><td><b>40003550</b></td></tr>
+          <tr><td>Túi Doraemon</td><td><b>40003724</b></td></tr>
+          <tr><td>Nón Doraemon</td><td><b>40003728</b></td></tr>
+          <tr><td>Vali Samsonite</td><td><b>40003618</b></td></tr>
+          <tr><td>Túi PNJ (CT03)</td><td><b>40002962 / 40003427 / 40004043 (hết: 40003623)</b></td></tr>
+          <tr><td>Bình giữ nhiệt PNJ (CT05)</td><td><b>40003625 / 40003288 / 40003271 / 40003244</b></td></tr>
+          <tr><td>Nước hoa cao cấp (CT04)</td><td><b>40003567 / 40003966 / 40004089</b></td></tr>
+        </tbody>
+      </table>
+      <div class="note-box">
+        Xuất thủ công + Ghi chú trên HĐ quà tặng: <b>"QUÀ TẶNG CT SINH NHẬT PNJ 38 NĂM cho HĐ 901XXXXXXX hoặc RMSXXXXXXXXXXXX. IO 260C090043"</b>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =================== SO SÁNH TỶ LỆ GIẢM =================== -->
+<div class="compare-section">
+  <h2>SO SÁNH TỶ LỆ GIẢM BIRTHDAY PASS vs CT07 CHỌN LỌC</h2>
+  <div class="bar-chart">
+    <div class="bar-item">
+      <div class="bar-label">KC rời / Đá rời</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:13%;background:var(--pnj-purple);">B.Pass 5%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">TS Vỏ/KC/CZ/ECZ</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:32%;background:var(--pnj-purple);">B.Pass 12%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">TS ECZ/KC (CT07)</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:66%;background:var(--pnj-green);">CT07: 25%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">TS Đá màu / Ngọc trai</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:34%;background:var(--pnj-purple);">B.Pass 13%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">Đồng hồ</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:47%;background:var(--pnj-purple);">B.Pass 18%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">Bạc / HKCC</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:53%;background:var(--pnj-purple);">B.Pass 20%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">Bạc/HKCC/ĐH (CT07)</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:100%;background:var(--pnj-green);">CT07: 38%</div>
+      </div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-label">TS CZ (CT07)</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:26%;background:var(--pnj-green);">CT07: 10%</div>
+      </div>
+    </div>
+  </div>
+  <div class="note-box" style="margin-top:12px;">
+    <strong>TIP TƯ VẤN:</strong> Nếu SP nằm trong danh sách CT07 &rarr; so sánh % giảm giữa CT02/CT04/CT07, chọn CT nào có lợi nhất cho KH.
+    Birthday Pass và CT07 KHÔNG chồng được với nhau!
+  </div>
+</div>
+
+<!-- =================== FOOTER =================== -->
+<div class="footer">
+  <p><b>THÔNG BÁO NỘI BỘ - PNJ</b> | Số: 182-2026-CT-PTTBL-CTMAR-PNJ</p>
+  <p>OFFLINE 70006707 - ONLINE 70006708 & IO 260C090043</p>
+  <p>Tài liệu training TVV | Soạn bởi Claude Code từ TBTK gốc | Ngày tạo: 10/04/2026</p>
+  <p style="margin-top:8px;color:#bbb;">Mọi thắc mắc liên hệ Phòng Tiếp Thị Bán Lẻ hoặc Quản lý cửa hàng</p>
+  <p style="margin-top:12px;"><a href="/ctkm/" style="color:var(--pnj-gold);text-decoration:none;font-weight:600;">&larr; Về danh sách CTKM</a></p>
+</div>
+
+</div>
+
+<script>
+function sortPrograms(mode) {
+  var container = document.getElementById('programs-container');
+  var items = Array.from(container.querySelectorAll('.program-section'));
+  var attr = mode === 'sequential' ? 'data-seq' : 'data-pri';
+  items.sort(function(a, b) {
+    return parseInt(a.getAttribute(attr)) - parseInt(b.getAttribute(attr));
+  });
+  items.forEach(function(item) { container.appendChild(item); });
+  // Toggle active button
+  document.getElementById('btn-seq').classList.toggle('active', mode === 'sequential');
+  document.getElementById('btn-pri').classList.toggle('active', mode === 'priority');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+
+{% block title %}Danh sách CTKM - PNJ Training{% endblock %}
+
+{% block extra_css %}
+<style>
+  /* HEADER */
+  .page-header {
+    background: linear-gradient(135deg, var(--pnj-black) 0%, #3a3a3a 50%, var(--pnj-black) 100%);
+    color: var(--pnj-white);
+    text-align: center;
+    padding: 32px 20px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(200,168,80,0.03) 30px, rgba(200,168,80,0.03) 60px);
+  }
+  .page-header h1 {
+    font-size: 26px;
+    font-weight: 900;
+    position: relative;
+    text-shadow: 0 2px 10px rgba(200,168,80,0.3);
+  }
+  .page-header h1 span { color: var(--pnj-gold); }
+  .page-header .subtitle {
+    font-size: 14px;
+    color: var(--pnj-gold-light);
+    font-weight: 500;
+    margin-top: 6px;
+    position: relative;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+  }
+
+  /* SECTION TITLE */
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--pnj-gold-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, var(--pnj-gold), transparent);
+  }
+
+  /* CTKM CARDS */
+  .ctkm-grid { display: grid; gap: 14px; }
+
+  .ctkm-card {
+    background: var(--pnj-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ctkm-card:hover {
+    box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+    border-color: var(--pnj-gold);
+  }
+  .ctkm-card:active {
+    transform: translateY(-1px);
+  }
+  .ctkm-card-inner {
+    display: flex;
+    align-items: stretch;
+  }
+  .ctkm-card-accent {
+    width: 5px;
+    flex-shrink: 0;
+  }
+  .ctkm-card-body {
+    flex: 1;
+    padding: 18px 20px;
+    min-width: 0;
+  }
+  .ctkm-card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .ctkm-card-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    color: white;
+    font-weight: 900;
+  }
+  .ctkm-card-title {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.3;
+    min-width: 0;
+  }
+  .ctkm-card-desc {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .ctkm-card-meta {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .ctkm-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .tag-date { background: #FFF3E0; color: #E65100; }
+  .tag-active { background: #E8F5E9; color: #2E7D32; }
+  .tag-ended { background: #FFEBEE; color: #C62828; }
+  .tag-channel { background: #E3F2FD; color: #1565C0; }
+
+  /* GUEST BANNER */
+  .guest-banner {
+    background: linear-gradient(135deg, #FFF3E0, #FFF8E1);
+    border: 2px solid #FFB74D;
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .guest-banner-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .guest-banner-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .guest-banner-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #E65100;
+    margin-bottom: 4px;
+  }
+  .guest-banner-desc {
+    font-size: 12px;
+    color: #8D6E00;
+    line-height: 1.5;
+  }
+  .guest-banner-login {
+    flex-shrink: 0;
+    background: var(--pnj-gold);
+    color: var(--pnj-black);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s;
+    white-space: nowrap;
+    align-self: center;
+  }
+  .guest-banner-login:hover {
+    background: var(--pnj-gold-dark);
+    color: white;
+  }
+
+  /* EMPTY STATE */
+  .empty-state {
+    text-align: center;
+    padding: 48px 20px;
+    color: #aaa;
+    font-size: 14px;
+  }
+  .empty-state .icon { font-size: 40px; margin-bottom: 12px; opacity: 0.5; }
+
+  @media (max-width: 600px) {
+    .page-header { padding: 24px 16px 20px; }
+    .page-header h1 { font-size: 21px; }
+    .container { padding: 16px 12px 32px; }
+    .ctkm-card-body { padding: 14px 16px; }
+    .ctkm-card-icon { width: 40px; height: 40px; font-size: 16px; border-radius: 10px; }
+    .ctkm-card-title { font-size: 14px; }
+    .ctkm-card-desc { font-size: 12px; }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>DANH SÁCH <span>CTKM</span></h1>
+  <div class="subtitle">Tổng hợp chương trình khuyến mãi - Tài liệu hướng dẫn TVV</div>
+</div>
+
+<div class="container">
+
+  {% if user.role == "guest" %}
+  <div class="guest-banner">
+    <div class="guest-banner-icon">&#9888;</div>
+    <div class="guest-banner-text">
+      <div class="guest-banner-title">Chế độ Khách - Thông tin hạn chế</div>
+      <div class="guest-banner-desc">Bạn đang xem với quyền khách. Một số nội dung chi tiết bị giới hạn. Đăng nhập bằng tài khoản được cấp để xem đầy đủ.</div>
+    </div>
+    <a href="{{ url_for('login') }}" class="guest-banner-login">Đăng nhập</a>
+  </div>
+  {% endif %}
+
+  {% set active_list = ctkm_list | selectattr("status", "equalto", "active") | list %}
+  {% set ended_list = ctkm_list | selectattr("status", "equalto", "ended") | list %}
+
+  {% if active_list %}
+  <div class="section-title">Đang hoạt động</div>
+  <div class="ctkm-grid">
+    {% for c in active_list %}
+    <a href="{{ url_for('ctkm_detail', slug=c.slug) }}" class="ctkm-card">
+      <div class="ctkm-card-inner">
+        <div class="ctkm-card-accent" style="background: {{ c.accent }};"></div>
+        <div class="ctkm-card-body">
+          <div class="ctkm-card-top">
+            <div class="ctkm-card-icon" style="background: {{ c.color }};">{{ c.icon }}</div>
+            <div class="ctkm-card-title">{{ c.title }}{% if c.subtitle %} - "{{ c.subtitle }}"{% endif %}</div>
+          </div>
+          <div class="ctkm-card-desc">{{ c.desc }}</div>
+          <div class="ctkm-card-meta">
+            <span class="ctkm-tag tag-date">{{ c.date_range }}</span>
+            <span class="ctkm-tag tag-active">Đang diễn ra</span>
+            <span class="ctkm-tag tag-channel">{{ c.channel }}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if ended_list %}
+  <div class="section-title" style="margin-top: 28px;">Đã kết thúc</div>
+  <div class="ctkm-grid">
+    {% for c in ended_list %}
+    <a href="{{ url_for('ctkm_detail', slug=c.slug) }}" class="ctkm-card" style="opacity:0.7;">
+      <div class="ctkm-card-inner">
+        <div class="ctkm-card-accent" style="background: #999;"></div>
+        <div class="ctkm-card-body">
+          <div class="ctkm-card-top">
+            <div class="ctkm-card-icon" style="background: #999;">{{ c.icon }}</div>
+            <div class="ctkm-card-title">{{ c.title }}</div>
+          </div>
+          <div class="ctkm-card-desc">{{ c.desc }}</div>
+          <div class="ctkm-card-meta">
+            <span class="ctkm-tag tag-date">{{ c.date_range }}</span>
+            <span class="ctkm-tag tag-ended">Đã kết thúc</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if not ctkm_list %}
+  <div class="empty-state">
+    <div class="icon">📋</div>
+    <p>Chưa có chương trình khuyến mãi nào.</p>
+  </div>
+  {% endif %}
+
+</div>
+{% endblock %}
