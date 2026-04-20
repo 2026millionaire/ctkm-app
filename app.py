@@ -12,7 +12,8 @@ from flask import (
     Flask, g, redirect, render_template, request, session, url_for, send_file,
     abort,
 )
-from werkzeug.security import check_password_hash
+
+import shared_auth
 
 # ---------------------------------------------------------------------------
 # App config
@@ -70,9 +71,7 @@ def close_db(exc):
 def get_current_user():
     if "user_id" not in session:
         return None
-    db = get_db()
-    user = db.execute("SELECT * FROM users WHERE id = ?", (session["user_id"],)).fetchone()
-    return user
+    return shared_auth.get_user(session["user_id"])
 
 
 def login_required(f):
@@ -103,9 +102,8 @@ def login():
     if request.method == "POST":
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "")
-        db = get_db()
-        user = db.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
-        if user and check_password_hash(user["password_hash"], password):
+        user = shared_auth.authenticate(username, password)
+        if user:
             session["user_id"] = user["id"]
             session["username"] = user["username"]
             session["role"] = user["role"]
